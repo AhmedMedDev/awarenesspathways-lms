@@ -4,11 +4,11 @@
     <!--  BEGIN CUSTOM STYLE FILE  -->
     <link href="assets/css/components/cards/card.css" rel="stylesheet" type="text/css" />
     <style>
-        .component-card_1{
+        .component-card_1 {
             width: auto;
         }
-    <style>
-          .card {
+
+        <style>.card {
             background-color: #000;
             font-family: 'Roboto', sans-serif;
             background: #e0e6ed;
@@ -103,8 +103,8 @@
             position: relative;
             transform-origin: center center;
             display: block;
-            width: 98px;
-            height: 98px;
+            width: 75px;
+            height: 75px;
             background: transparent;
             border-radius: 50%;
             line-height: 30px;
@@ -114,14 +114,11 @@
             box-sizing: border-box;
             border: 2px solid #3b3f5c;
             margin-top: 20px;
-            margin-left: -38px;
-            left: attr(value);
+            margin-left: -26px;
             color: #4361ee;
             font-style: normal;
             font-weight: normal;
-            line-height: normal;
-            font-size: 36px;
-
+            font-size: 25px;
         }
 
     </style>
@@ -142,7 +139,8 @@
                             <div class="container">
                                 <div class="range-slider">
                                     <span id="rs-bullet" class="rs-label">0</span>
-                                    <input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="200">
+                                    <input id="rs-range-line" class="rs-range" type="range" value="0" min="0"
+                                        max="100">
                                 </div>
                             </div>
                         </div>
@@ -167,7 +165,7 @@
         function showSliderValue() {
             rangeBullet.innerHTML = rangeSlider.value;
             var bulletPosition = (rangeSlider.value / rangeSlider.max);
-            rangeBullet.style.left = (bulletPosition * 395) + "px";
+            rangeBullet.style.left = (bulletPosition * 358) + "px";
         }
     </script>
 @endpush
