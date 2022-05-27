@@ -134,16 +134,16 @@ $wheel[5] = 'Learning & Personal Growth';
 
     <div class="row ">
         {{-- breadcrumbs --}}
-        <div class="page-header ml-3">
+        <div class="page-header ml-3 w-100">
             <nav class="breadcrumb-two" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
                     <li class="breadcrumb-item active"><a href="javascript:void(0);">Practices</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0);">BaseLine</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0);">Wheel Of Life</a></li>
                 </ol>
             </nav>
+            <button class="btn btn-info btn-lg mr-4">Submit</button>
         </div>
-        {{-- <button class="btn btn-info btn-lg ml-3">Submit</button> --}}
         {{-- breadcrumbs --}}
         <div class="col-12 layout-top-spacing layout-spacing justify-content-center">
             <div class="row ">
