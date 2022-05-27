@@ -21,13 +21,11 @@
     <div class="row">
         {{-- breadcrumbs  --}}
         <div class="page-header ml-3">
-            <div class="page-title">
-                <h3>N Codes - E Codes</h3>
-            </div>
-            <nav class="breadcrumb-one" aria-label="breadcrumb">
+            <nav class="breadcrumb-two" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="javascript:void(0);">Starter Kit</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><a href="javascript:void(0);">Breadcrumbs</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0);">Practices</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0);">N Codes - E Codes</a></li>
                 </ol>
             </nav>
         </div>
