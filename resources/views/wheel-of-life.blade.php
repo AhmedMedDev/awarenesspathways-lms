@@ -3,6 +3,8 @@
 @push('css')
     <!--  BEGIN CUSTOM STYLE FILE  -->
     <link href="assets/css/components/cards/card.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/elements/miscellaneous.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/elements/breadcrumb.css" rel="stylesheet" type="text/css" />
     <style>
         .component-card_1 {
             width: auto;
@@ -118,20 +120,39 @@
     </style>
     <!--  END CUSTOM STYLE FILE  -->
 @endpush
+@php
+$wheel[0] = 'Health';
+$wheel[1] = 'Friends & Family';
+$wheel[2] = 'Fun, Leisure & Recreation';
+$wheel[3] = 'Wealth';
+$wheel[4] = 'Relationship';
+$wheel[5] = 'Learning & Personal Growth';
+@endphp
 @section('content')
     <!-- CONTENT AREA -->
 
 
-    <div class="row justify-content-center">
-        <div class="col-10 layout-top-spacing layout-spacing">
-            <div class="row justify-content-center">
-
+    <div class="row ">
+        {{-- breadcrumbs --}}
+        <div class="page-header ml-3">
+            <nav class="breadcrumb-two" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0);">Practices</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0);">BaseLine</a></li>
+                </ol>
+            </nav>
+        </div>
+        {{-- <button class="btn btn-info btn-lg ml-3">Submit</button> --}}
+        {{-- breadcrumbs --}}
+        <div class="col-12 layout-top-spacing layout-spacing justify-content-center">
+            <div class="row ">
                 {{--  --}}
                 @for ($i = 0; $i < 6; $i++)
                     <div class="col-md-6 p-4">
                         <div class="card component-card_1">
                             <div class="card-body">
-                                <h5 class="card-title">Health</h5>
+                                <h5 class="card-title">{{ $wheel[$i] }}</h5>
                                 <div class="container">
                                     <div class="range-slider">
                                         {{-- <span id="rs-bullet" class="rs-label">0</span> --}}
@@ -143,9 +164,7 @@
                         </div>
                     </div>
                 @endfor
-
                 {{--  --}}
-
             </div>
         </div>
     </div>
