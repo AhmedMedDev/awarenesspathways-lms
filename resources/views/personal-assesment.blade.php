@@ -45,7 +45,7 @@
                             {{-- Counter --}}
 
                             <div class="d-flex justify-content-between align-items-center">
-                                {{-- <h2>136 / 152</h2> --}}
+                                <h2>0 / 152</h2>
                                 <button class="btn btn-info  btn-lg">Submit</button>
                             </div>
                         </div>

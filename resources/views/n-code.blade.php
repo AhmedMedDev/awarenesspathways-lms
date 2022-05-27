@@ -2,7 +2,16 @@
 
 @push('css')
     <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="assets/css/components/cards/card.css" rel="stylesheet" type="text/css" />
+    <style>
+        .component-card_1{
+            width: auto;
+        }
+    </style>
     <link href="assets/css/elements/search.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/elements/custom-pagination.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/elements/miscellaneous.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/elements/breadcrumb.css" rel="stylesheet" type="text/css" />
     <!--  END CUSTOM STYLE FILE  -->
 @endpush
 @section('content')
@@ -10,18 +19,36 @@
 
 
     <div class="row">
+        {{-- breadcrumbs  --}}
+        <div class="page-header ml-3">
+            <nav class="breadcrumb-two" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0);">Practices</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0);">N Codes - E Codes</a></li>
+                </ol>
+            </nav>
+        </div>
+        {{-- breadcrumbs --}}
         <div class="col-xl-12 col-lg-12 col-md-12 col-12 layout-top-spacing layout-spacing">
             <div class="row justify-content-center">
-                {{--  --}}
                 <div class="col-md-8">
                     <div class="card component-card_1">
-                        <div class="card-body">
-                            @for ($i = 0; $i < 10; $i++)
-                                <div class="custom-control custom-radio mb-4">
-                                    <input type="radio" id="customRadio{{$i}}" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio{{$i}}">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure sed itaque error unde velit ut eos aut ipsum </label>
-                                </div>
+                        <div class="card-body text-center ">
+                            @for ($i = 0; $i < 9; $i++)
+                                <button class="btn btn-primary w-50  mb-4 mr-2 btn-lg"> {{$i + 1}} . reprehenderit</button>
                             @endfor
+                            {{--  --}}
+                            <div class="paginating-container pagination-solid">
+                                <ul class="pagination">
+                                    <li class="prev"><a href="javascript:void(0);">Prev</a></li>
+                                    <li><a href="javascript:void(0);">1</a></li>
+                                    <li class="active"><a href="javascript:void(0);">2</a></li>
+                                    <li><a href="javascript:void(0);">3</a></li>
+                                    <li class="next"><a href="javascript:void(0);">Next</a></li>
+                                </ul>
+                            </div>
+                            {{--  --}}
                         </div>
                     </div>
                 </div>
@@ -60,4 +87,8 @@
     <!-- CONTENT AREA -->
 @endsection
 @push('js')
+<script src="plugins/font-icons/feather/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
 @endpush
