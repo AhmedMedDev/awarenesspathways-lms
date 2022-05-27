@@ -127,14 +127,14 @@
             <div class="row justify-content-center">
 
                 {{--  --}}
-                @for ($i = 0; $i < 4; $i++)
+                @for ($i = 0; $i < 6; $i++)
                     <div class="col-md-6 p-4">
                         <div class="card component-card_1">
                             <div class="card-body">
                                 <h5 class="card-title">Health</h5>
                                 <div class="container">
                                     <div class="range-slider">
-                                        <span id="rs-bullet" class="rs-label">0</span>
+                                        {{-- <span id="rs-bullet" class="rs-label">0</span> --}}
                                         <input id="rs-range-line" class="rs-range" type="range" value="0" min="0"
                                             max="100">
                                     </div>
