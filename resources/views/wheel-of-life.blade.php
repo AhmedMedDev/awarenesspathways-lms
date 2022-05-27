@@ -8,12 +8,6 @@
             width: auto;
         }
 
-        <style>.card {
-            background-color: #000;
-            font-family: 'Roboto', sans-serif;
-            background: #e0e6ed;
-        }
-
         .container {
             display: flex;
             flex-direction: column;
@@ -128,25 +122,29 @@
     <!-- CONTENT AREA -->
 
 
-    <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-12 layout-top-spacing layout-spacing">
+    <div class="row justify-content-center">
+        <div class="col-10 layout-top-spacing layout-spacing">
             <div class="row justify-content-center">
 
-                <div class="col-md-4">
-                    {{--  --}}
-                    <div class="card component-card_1">
-                        <div class="card-body">
-                            <div class="container">
-                                <div class="range-slider">
-                                    <span id="rs-bullet" class="rs-label">0</span>
-                                    <input id="rs-range-line" class="rs-range" type="range" value="0" min="0"
-                                        max="100">
+                {{--  --}}
+                @for ($i = 0; $i < 4; $i++)
+                    <div class="col-md-6 p-4">
+                        <div class="card component-card_1">
+                            <div class="card-body">
+                                <h5 class="card-title">Health</h5>
+                                <div class="container">
+                                    <div class="range-slider">
+                                        <span id="rs-bullet" class="rs-label">0</span>
+                                        <input id="rs-range-line" class="rs-range" type="range" value="0" min="0"
+                                            max="100">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {{--  --}}
-                </div>
+                @endfor
+
+                {{--  --}}
 
             </div>
         </div>
@@ -165,7 +163,7 @@
         function showSliderValue() {
             rangeBullet.innerHTML = rangeSlider.value;
             var bulletPosition = (rangeSlider.value / rangeSlider.max);
-            rangeBullet.style.left = (bulletPosition * 358) + "px";
+            // rangeBullet.style.left = (bulletPosition * 358) + "px";
         }
     </script>
 @endpush
