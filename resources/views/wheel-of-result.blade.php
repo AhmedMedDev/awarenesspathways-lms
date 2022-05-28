@@ -65,17 +65,23 @@
                     'Green',
                     'Yellow',
                     'Grey',
-                    'Blue'
+                    'Blue',
+                    'Burble',
+                    'Fan',
+                    'Black',
                 ],
                 datasets: [{
                     label: 'My First Dataset',
-                    data: [11, 16, 7, 3, 14],
+                    data: [11, 10, 7, 8, 14, 6, 12, 15],
                     backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(75, 192, 192)',
                         'rgb(255, 205, 86)',
                         'rgb(201, 203, 207)',
-                        'rgb(54, 162, 235)'
+                        'rgb(54, 162, 235)',
+                        '#5c1ac3',
+                        '#ffe1e2',
+                        '#e2a03f',
                     ]
                 }]
             },
