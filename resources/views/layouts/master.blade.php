@@ -16,12 +16,6 @@
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
     <style>
-        /*
-            The below code is for DEMO purpose --- Use it if you are using this demo otherwise Remove it
-        */
-        /*.navbar .navbar-item.navbar-dropdown {
-            margin-left: auto;
-        }*/
         .layout-px-spacing {
             min-height: calc(100vh - 170px) !important;
             animation: transition .6s
@@ -363,8 +357,8 @@
     // Turbolinks.setProgressBarDelay(delayInMilliseconds)
     // Turbolinks.visit('n-code')"
     $(document).ready(function() {
-    App.init();
-    Turbolinks.start()
+        App.init();
+        Turbolinks.start()
     });
     </script>
     <script src="assets/js/custom.js"></script>
