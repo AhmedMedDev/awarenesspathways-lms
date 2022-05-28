@@ -27,7 +27,9 @@
                     <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0);">Wheel Of Life</a></li>
                 </ol>
             </nav>
-            <button class="btn btn-info btn-lg mr-4">Submit</button>
+            <a href="./wheel-of-life">
+                <button class="btn btn-info btn-lg mr-4">Undo</button>
+            </a>
         </div>
         {{-- breadcrumbs --}}
         <div class="col-12 layout-top-spacing layout-spacing ">
