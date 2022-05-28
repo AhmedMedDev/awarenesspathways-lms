@@ -89,7 +89,7 @@
                                     /
                                     <span id="maxPicked">5</span>
                                 </h2>
-                                <button class="btn btn-info  btn-lg">Submit</button>
+                                <button id="submit" class="btn btn-info  btn-lg">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -105,6 +105,25 @@
 @push('js')
     <script src="plugins/font-icons/feather/feather.min.js"></script>
     <script>
+        $('#submit').on('click', function () {
+
+            // Delete un picked
+            $('.word.btn-primary').each(function () {
+                $(this).hide(500, function () {
+                    $(this).remove()
+                });
+            })
+            $('.word.btn-dark').each(function () {
+                $(this).removeClass('btn-dark')
+                $(this).addClass('btn-primary')
+            })
+
+            // Update maxPicked
+            $('#maxPicked').text(Math.floor(+$('#maxPicked').text() / 2))
+            $('#picked').text(0)
+
+        })
+
         $('.word').on('click', function() {
 
             if ($(this).hasClass('btn-primary')) {
