@@ -4,7 +4,7 @@
     <!--  BEGIN CUSTOM STYLE FILE  -->
     <link href="assets/css/components/cards/card.css" rel="stylesheet" type="text/css" />
     <style>
-        .component-card_1{
+        .component-card_1 {
             width: 30rem;
         }
     </style>
@@ -27,7 +27,9 @@
                     <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0);">Wheel Of Life</a></li>
                 </ol>
             </nav>
-            <button class="btn btn-info btn-lg mr-4">Submit</button>
+            <a href="./wheel-of-life">
+                <button class="btn btn-info btn-lg mr-4">Undo</button>
+            </a>
         </div>
         {{-- breadcrumbs --}}
         <div class="col-12 layout-top-spacing layout-spacing ">
@@ -65,17 +67,23 @@
                     'Green',
                     'Yellow',
                     'Grey',
-                    'Blue'
+                    'Blue',
+                    'Burble',
+                    'Fan',
+                    'Black',
                 ],
                 datasets: [{
                     label: 'My First Dataset',
-                    data: [11, 16, 7, 3, 14],
+                    data: [11, 10, 7, 8, 14, 6, 12, 15],
                     backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(75, 192, 192)',
                         'rgb(255, 205, 86)',
                         'rgb(201, 203, 207)',
-                        'rgb(54, 162, 235)'
+                        'rgb(54, 162, 235)',
+                        '#5c1ac3',
+                        '#ffe1e2',
+                        '#e2a03f',
                     ]
                 }]
             },

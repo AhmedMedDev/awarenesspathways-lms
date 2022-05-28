@@ -127,6 +127,8 @@ $wheel[2] = 'Fun, Leisure & Recreation';
 $wheel[3] = 'Wealth';
 $wheel[4] = 'Relationship';
 $wheel[5] = 'Learning & Personal Growth';
+$wheel[6] = 'Possessions';
+$wheel[7] = 'Career';
 @endphp
 @section('content')
     <!-- CONTENT AREA -->
@@ -142,13 +144,15 @@ $wheel[5] = 'Learning & Personal Growth';
                     <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0);">Wheel Of Life</a></li>
                 </ol>
             </nav>
-            <button class="btn btn-info btn-lg mr-4">Submit</button>
+            <a href="./wheel-of-result">
+                <button class="btn btn-info btn-lg mr-4">Submit</button>
+            </a>
         </div>
         {{-- breadcrumbs --}}
         <div class="col-12 layout-top-spacing layout-spacing justify-content-center">
             <div class="row ">
                 {{--  --}}
-                @for ($i = 0; $i < 6; $i++)
+                @for ($i = 0; $i < 8; $i++)
                     <div class="col-md-6 p-4">
                         <div class="card component-card_1">
                             <div class="card-body">
