@@ -24,6 +24,19 @@
         }*/
         .layout-px-spacing {
             min-height: calc(100vh - 170px) !important;
+            animation: transition .6s
+        }
+
+        @keyframes transition {
+            from {
+                opacity: 0;
+                /* transform: rotateX(-30deg) */
+            }
+
+            to {
+                opacity: 1;
+                /* transform: rotateX(0deg) */
+            }
         }
 
     </style>
@@ -340,16 +353,22 @@
     <script src="bootstrap/js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/app.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.js"
+        integrity="sha512-P3/SDm/poyPMRBbZ4chns8St8nky2t8aeG09fRjunEaKMNEDKjK3BuAstmLKqM7f6L1j0JBYcIRL4h2G6K6Lew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        $(document).ready(function() {
-            App.init();
-        });
+        < script src = "assets/js/app.js" >
+    </script>
+    // var Turbolinks = require("turbolinks")
+    // Turbolinks.setProgressBarDelay(delayInMilliseconds)
+    // Turbolinks.visit('n-code')"
+    $(document).ready(function() {
+    App.init();
+    Turbolinks.start()
+    });
     </script>
     <script src="assets/js/custom.js"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
-
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     @stack('js')
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
