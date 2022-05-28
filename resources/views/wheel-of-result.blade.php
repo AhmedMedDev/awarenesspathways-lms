@@ -4,7 +4,7 @@
     <!--  BEGIN CUSTOM STYLE FILE  -->
     <link href="assets/css/components/cards/card.css" rel="stylesheet" type="text/css" />
     <style>
-        .component-card_1{
+        .component-card_1 {
             width: 30rem;
         }
     </style>
