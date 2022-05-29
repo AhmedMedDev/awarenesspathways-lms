@@ -4,9 +4,10 @@
     <!--  BEGIN CUSTOM STYLE FILE  -->
     <link href="assets/css/components/cards/card.css" rel="stylesheet" type="text/css" />
     <style>
-        .component-card_1{
+        .component-card_1 {
             width: auto;
         }
+
     </style>
     <link href="assets/css/elements/search.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/elements/custom-pagination.css" rel="stylesheet" type="text/css" />
@@ -35,8 +36,8 @@
                 <div class="col-md-8">
                     <div class="card component-card_1">
                         <div class="card-body text-center ">
-                            @for ($i = 0; $i < 9; $i++)
-                                <button class="btn btn-primary w-50  mb-4 mr-2 btn-lg"> {{$i + 1}} . dolor sit amet consectetur adipisicing elit</button>
+                            @for ($i = 0; $i < 10; $i++)
+                                <button class="btn btn-primary w-50  mb-4 mr-2 btn-lg word"> {{ $i + 1 }} . dolor sit amet consectetur adipisicing elit</button>
                             @endfor
                             {{--  --}}
                             <div class="paginating-container pagination-solid">
@@ -60,20 +61,34 @@
                             <div class="filtered-list-search mx-auto">
                                 <form class="form-inline my-2 my-lg-0 justify-content-center">
                                     <div class="w-100">
-                                        <input type="text" class="w-100 form-control product-search br-30" id="input-search" placeholder="Search Attendees...">
-                                        <button class="btn btn-primary" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                                        <input type="text" class="w-100 form-control product-search br-30" id="input-search"
+                                            placeholder="Search Attendees...">
+                                        <button class="btn btn-primary" type="submit"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-search">
+                                                <circle cx="11" cy="11" r="8"></circle>
+                                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                            </svg></button>
                                     </div>
                                 </form>
                             </div>
                             {{-- Desc --}}
                             <p class="mb-4">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam vero, magni eius officiis, quibusdam reprehenderit eos nemo quas, minus esse ratione ipsum! Minus sapiente nemo cupiditate. Fuga ut quibusdam et!
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam vero, magni eius officiis,
+                                quibusdam reprehenderit eos nemo quas, minus esse ratione ipsum! Minus sapiente nemo
+                                cupiditate. Fuga ut quibusdam et!
                             </p>
                             {{-- Counter --}}
 
                             <div class="d-flex justify-content-between align-items-center">
-                                <h2>136 / 152</h2>
-                                <button class="btn btn-info  btn-lg">Submit</button>
+                                <h2>
+                                    <span id="picked">0</span>
+                                    /
+                                    <span id="maxPicked">5</span>
+                                </h2>
+                                <button id="submit" class="btn btn-info  btn-lg">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -87,8 +102,42 @@
     <!-- CONTENT AREA -->
 @endsection
 @push('js')
-<script src="plugins/font-icons/feather/feather.min.js"></script>
-<script>
-    feather.replace();
-</script>
+    <script src="plugins/font-icons/feather/feather.min.js"></script>
+    <script>
+        $('#submit').on('click', function () {
+
+            // Delete un picked
+            $('.word.btn-primary').each(function () {
+                $(this).hide(500, function () {
+                    $(this).remove()
+                });
+            })
+            $('.word.btn-dark').each(function () {
+                $(this).removeClass('btn-dark')
+                $(this).addClass('btn-primary')
+            })
+
+            // Update maxPicked
+            $('#maxPicked').text(Math.floor(+$('#maxPicked').text() / 2))
+            $('#picked').text(0)
+
+        })
+
+        $('.word').on('click', function() {
+
+            if ($(this).hasClass('btn-primary')) {
+                if ( +$('#picked').text() < +$('#maxPicked').text()) {
+                    $(this).removeClass('btn-primary')
+                    $(this).addClass('btn-dark')
+                    $('#picked').text(+$('#picked').text() + 1)
+                }
+
+            } else {
+                $(this).removeClass('btn-dark')
+                $(this).addClass('btn-primary')
+                $('#picked').text(+$('#picked').text() - 1)
+            }
+        })
+        feather.replace();
+    </script>
 @endpush
