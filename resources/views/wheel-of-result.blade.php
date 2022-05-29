@@ -22,7 +22,7 @@
         <div class="page-header ml-3 w-100">
             <nav class="breadcrumb-two" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
                     <li class="breadcrumb-item active"><a href="javascript:void(0);">Practices</a></li>
                     <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0);">Wheel Of Life</a></li>
                 </ol>
@@ -59,6 +59,7 @@
         var ctx = $('#myChart');
         var ctx = 'myChart';
         var ctx = document.getElementById('myChart');
+        let result = localStorage.getItem('wheel-chart');
         var myChart = new Chart(ctx, {
             type: 'polarArea',
             data: {
@@ -74,7 +75,7 @@
                 ],
                 datasets: [{
                     label: 'My First Dataset',
-                    data: [11, 10, 7, 8, 14, 6, 12, 15],
+                    data: result,
                     backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(75, 192, 192)',
