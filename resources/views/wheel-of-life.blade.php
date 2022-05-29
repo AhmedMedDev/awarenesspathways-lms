@@ -37,9 +37,9 @@ $wheel[7] = 'Career';
                     <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0);">Wheel Of Life</a></li>
                 </ol>
             </nav>
-            <a href="./wheel-of-result">
-                <button class="btn btn-info btn-lg mr-4">Submit</button>
-            </a>
+            {{-- <a href="./wheel-of-result"> --}}
+                <button class="btn btn-info btn-lg mr-4 submit">Submit</button>
+            {{-- </a> --}}
         </div>
         {{-- breadcrumbs --}}
         <div class="col-12 layout-top-spacing layout-spacing justify-content-center">
@@ -68,4 +68,21 @@ $wheel[7] = 'Career';
 @endsection
 @push('js')
     <script src="plugins/bootstrap-range-Slider/bootstrap-rangeSlider.js"></script>
+
+    <script>
+        $('.submit').on('click', function () {
+
+            let result = []
+
+            $('.custom-range').each(function () {
+                result.push(+$(this).val())
+            })
+
+            localStorage.setItem('wheel-chart', JSON.stringify(result));
+
+            console.log(localStorage.getItem('wheel-chart'));
+            window.location.assign('wheel-of-result')
+            // Turbolinks.visit('wheel-of-result')
+        })
+    </script>
 @endpush

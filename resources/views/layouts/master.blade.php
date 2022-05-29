@@ -350,16 +350,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.js"
         integrity="sha512-P3/SDm/poyPMRBbZ4chns8St8nky2t8aeG09fRjunEaKMNEDKjK3BuAstmLKqM7f6L1j0JBYcIRL4h2G6K6Lew=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src = "assets/js/app.js" ></script>
     <script>
-        < script src = "assets/js/app.js" >
-    </script>
-    // var Turbolinks = require("turbolinks")
-    // Turbolinks.setProgressBarDelay(delayInMilliseconds)
-    // Turbolinks.visit('n-code')"
-    $(document).ready(function() {
-        App.init();
-        Turbolinks.start()
-    });
+        $(document).ready(function() {
+            App.init();
+            Turbolinks.start()
+        });
     </script>
     <script src="assets/js/custom.js"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->

@@ -59,6 +59,7 @@
         var ctx = $('#myChart');
         var ctx = 'myChart';
         var ctx = document.getElementById('myChart');
+        let result = localStorage.getItem('wheel-chart');
         var myChart = new Chart(ctx, {
             type: 'polarArea',
             data: {
@@ -74,7 +75,7 @@
                 ],
                 datasets: [{
                     label: 'My First Dataset',
-                    data: [11, 10, 7, 8, 14, 6, 12, 15],
+                    data: result,
                     backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(75, 192, 192)',
