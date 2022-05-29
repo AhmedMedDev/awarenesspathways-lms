@@ -24,7 +24,7 @@
         <div class="page-header ml-3">
             <nav class="breadcrumb-two" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/index">Home</a></li>
                     <li class="breadcrumb-item active"><a href="javascript:void(0);">Practices</a></li>
                     <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0);">N Codes - E Codes</a></li>
                 </ol>
