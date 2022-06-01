@@ -1,0 +1,64 @@
+
+--------------------------
+
+- - Auth str semi final //
+- - Auth str final //
+- - Player Dash Final //
+- - instit profile 
+	- insti players
+	- Fed header
+
+-------------------------
+
+****** Practise Tool *******
+
+- Home view
+	menu seen 
+
+- personal assesment
+	just collection of checkboxes
+
+------------------------- 30min
+- We Love Life
+	6 range sliders
+	then chart js ( Circle with result ) 
+
+------------------------- 1h
+- Baseline
+	words in horizontel view
+	and you choose some of them 
+	then you choose hafe of your choice
+	and so on to achive to 1 word
+
+- N code
+	same @Baseline but insted words by statments
+
+------------------------- 70min
+- Define My outcome 
+	just make design 
+
+- Decision Make wheel 
+	static circle and on click open modal with question and input box 
+------------------------- 30min
+
+- Home Seen //
+- personal // 
+- N code //
+- Baseline //
+
+- Wheel of life
+	6 range sliders //
+	then chart js ( Circle with result ) //
+
+- on save , just got to change values of chart
+	take view from first seen 
+
+
+
+
+
+- - solve lables prob
+- - solve size prob
+---------------------------------
+DB side
+- you just save result of each in DB
